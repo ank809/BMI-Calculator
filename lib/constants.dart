@@ -11,3 +11,20 @@ const ktextStyle=  TextStyle(
                       fontSize: 50.0,
                       fontWeight: FontWeight.w900,
                     );
+const buttonStyle= TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 30.0,
+                          color: Colors.white);
+
+const ktextStylE= TextStyle(
+  fontSize: 50.0,
+  fontWeight: FontWeight.bold,
+);
+const kresultStyle= TextStyle(
+  fontSize:22.0,
+  color: Colors.green, 
+);
+const koutput= TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 100.0,
+);
