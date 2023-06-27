@@ -4,7 +4,11 @@ import 'package:flutter/material.dart';
 import 'reuseable_card.dart';
 
 class Result extends StatelessWidget {
-  const Result({Key? key});
+  final String bmiResults;
+  final String resultText;
+  final String interpretation;
+
+  Result({required this.bmiResults, required this.resultText, required this.interpretation});
 
   @override
   Widget build(BuildContext context) {
@@ -33,15 +37,15 @@ class Result extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      'Overweight',
+                      resultText.toUpperCase(),
                       style: kresultStyle,
                     ),
                     Text(
-                      '56',
+                      bmiResults,
                       style: koutput,
                     ),
                     Text(
-                      'Your results are not normal you should work on your diet',
+                      interpretation,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 22.0,

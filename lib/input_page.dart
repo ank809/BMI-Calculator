@@ -6,6 +6,7 @@ import 'constants.dart';
 import 'reuseable_card.dart';
 import 'bottom_button.dart';
 import 'round_icon_button.dart';
+import 'calculator_brain.dart';
 enum Gendertype {male, female}
 const bottomColor=Color(0xFFEB1555);
 
@@ -194,7 +195,13 @@ class _Home_pageState extends State<Home_page> {
                   ),
                   ),
                    BottomButton(ontap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Result()));
+                    Calculator_Brain cal= Calculator_Brain(height: height, weight: weight);
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Result(
+                      bmiResults: cal.calculateBMI(),
+                      resultText: cal.getResult(),
+                      interpretation: cal.getInterpretation(),
+
+                    )));
                    }, buttonname: 'CALCULATE')
                 ]
                 ),                  
